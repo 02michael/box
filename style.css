@@ -1,0 +1,64 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; background: #eee9e2; }
+
+.scene {
+  position: fixed; inset: 0;
+  perspective: 1200px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.camera {
+  transform-style: preserve-3d;
+  transform: rotateX(-28deg) rotateY(32deg);
+}
+
+.box   { position: absolute; transform-style: preserve-3d; }
+.hinge { position: absolute; transform-style: preserve-3d; }
+.face  { position: absolute; }
+
+.controls {
+  position: fixed; top: 16px; right: 16px;
+  display: flex; align-items: center; gap: 10px;
+  font: 11px/1 system-ui, sans-serif;
+  color: rgba(0,0,0,0.35);
+}
+
+.controls input[type="range"] {
+  -webkit-appearance: none;
+  width: 80px; height: 2px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 1px;
+  outline: none;
+}
+
+.controls input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px; height: 12px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls button {
+  background: none;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  padding: 3px 8px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.controls button:hover { border-color: rgba(0,0,0,0.4); }
+
+.credit {
+  position: fixed; bottom: 10px; right: 14px;
+  font: 10px/1 system-ui, sans-serif;
+  color: rgba(0,0,0,0.18);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.credit:hover { color: rgba(0,0,0,0.45); }
