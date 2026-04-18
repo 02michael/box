@@ -24,7 +24,7 @@ html, body { height: 100%; overflow: hidden; background: #eee9e2; }
 }
 
 .controls input[type="range"] {
-  -webkit-appearance: none;
+  -webkitappearance: none;
   width: 80px; height: 2px;
   background: rgba(0,0,0,0.15);
   border-radius: 1px;
